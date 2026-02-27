@@ -70,6 +70,8 @@ groups alice_sec
 groups bob_sec
 groups carol_sec
 ```
+ ![Group verification](screenshot/01_group_user_verification.png)
+ 
 ---
 ### 4. Script Development
 
@@ -117,6 +119,7 @@ Expected permission structure:
 ```
 -rwxr-x--- 1 root security testsweep.sh
 ```
+![Script permissions](screenshot/02_script_permissions.png)
 This configuration enforces the Principle of Least Privilege by preventing unauthorized users from executing the script.
 
 ---
@@ -136,8 +139,8 @@ Active IP addresses:
 192.168.64.128
 ```
 Sweep complete. Results saved in sweep_results.txt
-
-# To verify that results were properly logged:
+![Script execution](screenshot/03_script_execution.png)
+To verify that results were properly logged:
 ```
 cat sweep_results.txt
 ```
@@ -148,7 +151,7 @@ Active IP addresses:
 192.168.64.2
 192.168.64.128
 ```
-
+![Sweep results](screenshot/sweep_results.png)
 # Commands Executed
 
 The following commands were used throughout the lab implementation.
@@ -186,4 +189,11 @@ Script Execution
 cat sweep_results.txt
 ```
 
-Note: Screenshots of these command outputs are stored in the screenshots/ directory of this repository.
+## Key Observations / Lessons Learned
+
+- Subnet scanning quickly identifies active devices on the network.  
+- Restricting script execution to the SECURITY group prevents unauthorized access.  
+- Proper file ownership and permissions are critical for enterprise security.  
+- Logging results allows verification against an official asset inventory.  
+- Hands-on experience gained in Linux user/group management, Bash scripting, network reconnaissance, and access control implementation.  
+- Demonstrated the importance of following the Principle of Least Privilege in real-world scenarios.  
